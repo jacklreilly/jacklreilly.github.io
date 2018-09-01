@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Andrew Bray</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Andrew Bray</h1>
+
+<img src="abray-pic2.JPG" alt="Photo of A. Bray">
+
+        <p class="view">Return to <a href="index.html">main page</a>.
+                        </p>
+
+
+      </header>
+      <section>
+
+<p>I am interested in a wide variety of questions in statistics, applied and theoretical. Take a look at the list below, check out the accompanying papers, and let me know if any of them spark your interest.</p>
+
+<h3>Inference for Trees</h3>
+<p>The inferential properties of linear regression models are well understood and widely used in the sciences. While algorithmic models, such as regression trees and their extensions, are now widely used for prediction, their inferential capabilities are very underdeveloped. Can we compare the variable importances in a random forest model to the betas of a regression model? How can we calculate the equivalent of a p-value? See Leo Breiman's seminal <a href="https://projecteuclid.org/download/pdf_1/euclid.ss/1009213726">seminal 2001 paper</a> for a starting point.</p>
+
+<h3>WHIM Algorithm (Where It Matters)</h3>
+<p>A key step in a statistical analysis is the fitting of a statistical model to a particular data set. This usually amounts to maximizing a likelihood function or posterior density. <a href = "https://projecteuclid.org/download/pdfview_1/euclid.ejs/1444742888">Lavine et al (2015)</a> propose a branch-and-bound style algorithm that explore the shape of these functions while ensuring that no global maxima are missed. There are many open problems related to this algorithm. How does the complexity scale in n and p? What can be learned from a WHIM analysis compared to a traditional MLE analysis? Ask me for a draft of Lavine 2016 for an overview.</p>
+
+<h3>Forensic Statistics</h3>
+<p>The use of fingerprinting as a method of peronsal identification is now well-estalished. Can we improve identification by explicitly modeling the print deformation that occurs when someone presses their finger onto a surface? This work is an extension of the 2015/2016 forensics workshop at Statistical and Applied Mathematical Studies Institute (SAMSI).</p>
+
+<h3>Spatial Models over Networks</h3>
+<p>Will Jones (Reed '15) constructed several models for the quality of bike routes across the city of Portland using data that arises from an app called Ride Report. His analysis used hierarchical logistic regression models as well as a missing data model to shed light on strong correlates of ride quality. The next step in the analysis is to explicitly consider the spatial aspect of the data by constructing a spatial model over the road network. See Will's <a href = "https://github.com/wjones127/thesis">github repo</a> for details.</p>
+
+<h3>Cluster Detection for Sampled Point Process Data</h3>
+<p>Philip Stalworth (Reed '15) investigated how clusters can be detected in data that has been sampled via k-tree sampling. The data on hand relates to the location of pitcher plants across several bogs in New England. His thesis concludes with several ideas on how to weave together several techniques to accomplish this goal. See Philip's <a href = "https://github.com/phstallworth/spptrees">github repo</a> for details.</p>
+
+<h3>Social Network Models for Valued Data</h3>
+There is a rapidly growing body of research on statistical models for network data in which the ties between nodes is binary (either there is a tie or there is not). In many settings, however, the tie is valued; i.e. it can take on any value within an interval. Michael Weiss (Reed '15) studied the social behavior of Orcas in Puget Sound and noted the proportion of time that each whale spent in one another's presence. His analysis creates a hard threshold, then converts the valued data into binary data to allow the use of the well-developed binary models. There are many open questions into how these valued network models can be parameterized and estimated, along with the natural applciation of these models to Michael's Orca data. You can find a copy of Michael's thesis in the library or in my office.
+
+
+
+
+
+
+
+      </section>
+
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
