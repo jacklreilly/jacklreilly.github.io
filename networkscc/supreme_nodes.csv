@@ -1,0 +1,10 @@
+id,justice,abbrev,type,party,president,year,seniority
+j01,Roberts,JR,Chief,Republican,Bush Jr,2005,16
+j02,Thomas,CT,Associate,Republican,Bush Sr,1991,30
+j03,Breyer,SB,Associate,Democrat,Clinton,1994,27
+j04,Alito,SA,Associate,Republican,Bush Jr,2006,15
+j05,Sotomayor,SS,Associate,Democrat,Obama,2009,12
+j06,Kagan,EK,Associate,Democrat,Obama,2010,11
+j07,Gorsuch,NG,Associate,Republican,Trump,2017,4
+j08,Kavanaugh,BK,Associate,Republican,Trump,2018,3
+j09,Barrett,ACB,Associate,Republican,Trump,2020,1
