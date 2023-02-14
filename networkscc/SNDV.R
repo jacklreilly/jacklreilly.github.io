@@ -9,7 +9,7 @@
 library("igraph")
 setwd("your/working/directory")
 
-#Load the node and edge data
+#Load nodelist and edgelist as objects
 nodes <- read.csv("supreme_nodes.csv", header=T, as.is=T)
 links <- read.csv("supreme_edgelist.csv", header=T, as.is=T)
 
@@ -17,15 +17,11 @@ links <- read.csv("supreme_edgelist.csv", header=T, as.is=T)
 head(nodes)
 head(links)
 
-# Converting the data to an igraph object:
-# The graph_from_data_frame() function takes two data frames: 'd' and 'vertices'.
-# 'd' identifies the edgelist. It should start with two columns 
-# containing the source and target node IDs for each network tie.
-# 'vertices' identifies the node list. It should start with a column of node IDs.
-# Any additional columns in either data frame are interpreted as attributes.
+#Convert to an iGraph network. “d” identifies the edgelist; “vertices” identifies the nodelist
 net <- graph_from_data_frame(d=links, vertices=nodes, directed=F) 
 
-#Can use igraph to convert to adjacency matrix
+#If we want to output an adjacency matrix, we can 
+#(we just need to identify the attribute to encode)
 adjacency<-as_adjacency_matrix(net, attr="weight")
 
 # Examine the resulting object:
