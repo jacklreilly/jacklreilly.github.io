@@ -1,13 +1,13 @@
 #Title: SNDV.R
 #Author: Jack Reilly
-#Last Revision: February 13, 2023
+#Last Revision: February 15, 2023
 #Purpose: Illustrate the supreme court agreement network; show different ways of illustrating networks
 #Reference: Adapted from:
 #Ognyanova, K. (2021) Network visualization with R. Retrieved from www.kateto.net/network-visualization
 
 #Load the igraph library and set the working directory 
 library("igraph")
-setwd("your/working/directory")
+setwd("~/desktop/working/networks")
 
 #Load nodelist and edgelist as objects
 nodes <- read.csv("supreme_nodes.csv", header=T, as.is=T)
@@ -75,15 +75,7 @@ plot.igraph(net,
             vertex.label.color="black", 
             vertex.size=20)
 
-# Let's and reduce the arrow size and remove the labels:
-plot.igraph(net, 
-            vertex.label=V(net)$abbrev,
-            vertex.label.family="Helvetica",
-            vertex.label.font=2,
-            vertex.label.color="black",
-            vertex.size=20)
-
-#We might prefer names, though, for interpretatiblity 
+#We might prefer names, though, for interpretability  
 plot.igraph(net, 
             vertex.label=V(net)$justice,
             vertex.label.family="Helvetica",
@@ -91,9 +83,8 @@ plot.igraph(net,
             vertex.label.color="black",
             vertex.size=48)
 
-
 #####
-##2##  Color by party
+##2##  Color nodes by party
 #####
 
 ## Generate colors based on party:
@@ -258,6 +249,14 @@ plot.igraph(net, mark.groups=list(c(7,8,9), c(5,6), c(1,4)),
 #Choose color palette
 palf <- colorRampPalette(c("white", "darkgreen")) 
 
+#Get the adjacency matrix and put names on it
+netm <- get.adjacency(net, 
+                      attr="weight", sparse=F)
+
+colnames(netm) <- V(net)$justice
+rownames(netm) <- V(net)$justice
+
 #Draw a heatmap of agreement
-heatmap(netm[,9:1], Rowv = NA, Colv = NA, col = palf(100), 
+heatmap(netm, Rowv = NA, 
+        Colv = NA, col = palf(100), 
         scale="none", margins=c(10,10) )
