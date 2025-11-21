@@ -1,8 +1,7 @@
 #Title: SNDV.R
 #Author: Jack Reilly
-#Last Revision: February 15, 2023
 #Purpose: Illustrate the supreme court agreement network; show different ways of illustrating networks
-#Reference: Adapted from:
+#Reference - portions adapted from:
 #Ognyanova, K. (2021) Network visualization with R. Retrieved from www.kateto.net/network-visualization
 
 #Load the igraph library and set the working directory 
@@ -102,7 +101,7 @@ plot.igraph(net,
 #####
 
 #Scale nodes by eigenvector centrality
-V(net)$eigen<-evcent(net)$vector
+V(net)$eigen<-eigen_centrality(net)$vector
 
 plot.igraph(net, 
             vertex.label=V(net)$justice,
